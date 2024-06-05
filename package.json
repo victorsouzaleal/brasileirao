@@ -1,0 +1,19 @@
+{
+  "name": "@victorsouzaleal/brasileirao-serie-a",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scrapper para obter dados da tabela e das rodadas do brasileirão serie A",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": "https://github.com/victorsouzaleal/brasileirao-serie-a.git",
+  "author": "victorsouzaleal <victorsouzaleal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "jsdom": "^24.1.0",
+    "user-agents": "^1.1.225"
+  }
+}
