@@ -8,7 +8,7 @@
     "start": "node index.js",
     "test": "node test.js"
   },
-  "repository": "https://github.com/victorsouzaleal/brasileirao-serie-a.git",
+  "repository": "https://github.com/victorsouzaleal/brasileirao.git",
   "author": "victorsouzaleal <victorsouzaleal@gmail.com>",
   "license": "MIT",
   "dependencies": {
