@@ -3,7 +3,7 @@ import {JSDOM} from 'jsdom'
 import UserAgent from 'user-agents'
 
 
-export async function obterBrasileiraoA(rodadas = false){
+export async function obterBrasileiraoA(rodadas = true){
     try {
         const URL_TABELA = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
         const URL_RODADAS = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
@@ -18,7 +18,7 @@ export async function obterBrasileiraoA(rodadas = false){
     }
 }
 
-export async function obterBrasileiraoB(rodadas = false){
+export async function obterBrasileiraoB(rodadas = true){
     try {
         const URL_TABELA = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1419&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
         const URL_RODADAS = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1419&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"

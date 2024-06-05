@@ -1,7 +1,7 @@
 import {obterBrasileiraoA, obterBrasileiraoB} from './src/scrapper.js'
 
 
-export async function obterDadosBrasileiraoA(rodadas = false){
+export async function obterDadosBrasileiraoA(rodadas = true){
     return new Promise(async(resolve, reject)=>{
         try{
             const dadosBrasileiraoA = await obterBrasileiraoA(rodadas)
@@ -12,7 +12,7 @@ export async function obterDadosBrasileiraoA(rodadas = false){
     })
 }
 
-export async function obterDadosBrasileiraoB(rodadas = false){
+export async function obterDadosBrasileiraoB(rodadas = true){
     return new Promise(async(resolve, reject)=>{
         try{
             const dadosBrasileiraoB = await obterBrasileiraoB(rodadas)
