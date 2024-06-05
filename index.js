@@ -1,15 +1,22 @@
-import {obterDadosTabela, obterDadosRodadas} from './src/scrapper.js'
+import {obterBrasileiraoA, obterBrasileiraoB} from './src/scrapper.js'
 
 
-export async function obterDadosBrasileirao(rodadas = false){
+export async function obterDadosBrasileiraoA(rodadas = false){
     return new Promise(async(resolve, reject)=>{
         try{
-            let resultado = {}
-            resultado.tabela = await obterDadosTabela()
-            if(rodadas){
-                resultado.rodadas = await obterDadosRodadas()
-            }
-            resolve(resultado)
+            const dadosBrasileiraoA = await obterBrasileiraoA(rodadas)
+            resolve(dadosBrasileiraoA)
+        } catch(err){
+            reject({erro: err.message})
+        }
+    })
+}
+
+export async function obterDadosBrasileiraoB(rodadas = false){
+    return new Promise(async(resolve, reject)=>{
+        try{
+            const dadosBrasileiraoB = await obterBrasileiraoB(rodadas)
+            resolve(dadosBrasileiraoB)
         } catch(err){
             reject({erro: err.message})
         }

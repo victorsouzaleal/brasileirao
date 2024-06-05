@@ -3,6 +3,36 @@ import {JSDOM} from 'jsdom'
 import UserAgent from 'user-agents'
 
 
+export async function obterBrasileiraoA(rodadas = false){
+    try {
+        const URL_TABELA = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+        const URL_RODADAS = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+        let resultado = {}
+        resultado.tabela = await obterDadosTabela(URL_TABELA)
+        if(rodadas){
+            resultado.rodadas = await obterDadosRodadas(URL_RODADAS)
+        }
+        return resultado
+    } catch(err){
+        throw err
+    }
+}
+
+export async function obterBrasileiraoB(rodadas = false){
+    try {
+        const URL_TABELA = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1419&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+        const URL_RODADAS = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1419&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+        let resultado = {}
+        resultado.tabela = await obterDadosTabela(URL_TABELA)
+        if(rodadas){
+            resultado.rodadas = await obterDadosRodadas(URL_RODADAS)
+        }
+        return resultado
+    } catch(err){
+        throw err
+    }
+}
+
 async function obterPagina(url){
     try{
         const userAgent = new UserAgent()
@@ -14,9 +44,9 @@ async function obterPagina(url){
     }
 }
 
-export async function obterDadosTabela(){
+async function obterDadosTabela(url){
     try{
-        const { document } = await obterPagina("https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR")
+        const { document } = await obterPagina(url)
         const times = []
         const $times = document.querySelectorAll("table > tbody > tr")
     
@@ -44,9 +74,9 @@ export async function obterDadosTabela(){
     }
 }
 
-export async function obterDadosRodadas(){
+async function obterDadosRodadas(url){
     try{
-        const { document } = await obterPagina("https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR")
+        const { document } = await obterPagina(url)
         const rodadas = []
         const $rodadas = document.querySelectorAll("ul.rounds > li")
     

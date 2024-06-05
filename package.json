@@ -1,8 +1,8 @@
 {
-  "name": "@victorsouzaleal/brasileirao-serie-a",
+  "name": "@victorsouzaleal/brasileirao",
   "version": "1.0.0",
   "type": "module",
-  "description": "Scrapper para obter dados da tabela e das rodadas do brasileirão serie A",
+  "description": "Scrapper para obter dados da tabela e das rodadas do brasileirão serie A e B",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
