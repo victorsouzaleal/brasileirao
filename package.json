@@ -1,18 +1,20 @@
 {
   "name": "@victorsouzaleal/brasileirao",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Scrapper para obter dados da tabela e das rodadas do brasileirão serie A e B",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
-  "files": ["dist"],
-  "exports":{
-    ".":{
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
       "require": "./dist/index.cjs",
       "import": "./dist/index.js",
       "types": "./dist/types/index.d.ts"
     },
-    "./package.json" : "./package.json"
+    "./package.json": "./package.json"
   },
   "scripts": {
     "build": "tsc",
