@@ -3,10 +3,21 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Scrapper para obter dados da tabela e das rodadas do brasileirão serie A e B",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": ["dist"],
+  "exports":{
+    ".":{
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./package.json" : "./package.json"
+  },
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "postbuild": "rollup ./dist/index.js --format cjs --file ./dist/index.cjs"
   },
   "repository": "https://github.com/victorsouzaleal/brasileirao.git",
   "author": "victorsouzaleal <victorsouzaleal@gmail.com>",
@@ -15,5 +26,12 @@
     "axios": "^1.7.2",
     "jsdom": "^24.1.0",
     "user-agents": "^1.1.225"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.13.5",
+    "@types/user-agents": "^1.0.4",
+    "rollup": "^4.34.8",
+    "typescript": "^5.7.3"
   }
 }
