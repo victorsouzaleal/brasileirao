@@ -45,7 +45,7 @@ export interface DadosBrasileirao {
     rodadas? : Rodada[]
 }
 
-export async function obterBrasileiraoA(rodadas = true){
+export async function obterDadosBrasileiraoA(rodadas = true){
     try {
         const tabelaTimes = await obterDadosTabela(URL_TABELA_A)
         let resultado : DadosBrasileirao = {tabela: tabelaTimes}
@@ -56,7 +56,7 @@ export async function obterBrasileiraoA(rodadas = true){
     }
 }
 
-export async function obterBrasileiraoB(rodadas = true){
+export async function obterDadosBrasileiraoB(rodadas = true){
     try {
         const tabelaTimes = await obterDadosTabela(URL_TABELA_B)
         let resultado : DadosBrasileirao = {tabela: tabelaTimes}
