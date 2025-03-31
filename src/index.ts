@@ -2,10 +2,10 @@ import axios from 'axios'
 import {JSDOM} from 'jsdom'
 import UserAgent from 'user-agents'
 
-const URL_TABELA_A = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
-const URL_RODADAS_A = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1420&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
-const URL_TABELA_B = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1419&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
-const URL_RODADAS_B = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1419&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+const URL_TABELA_A = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1436&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+const URL_RODADAS_A = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1436&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+const URL_TABELA_B = "https://p1.trrsf.com/api/musa-soccer/ms-standings-light?idChampionship=1438&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
+const URL_RODADAS_B = "https://p1.trrsf.com/api/musa-soccer/ms-standings-games-light?idChampionship=1438&idPhase=&language=pt-BR&country=BR&nav=N&timezone=BR"
 
 export interface TimeTabela {
     nome: string,
