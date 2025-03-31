@@ -1,6 +1,6 @@
 {
   "name": "@victorsouzaleal/brasileirao",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "type": "module",
   "description": "Scrapper para obter dados da tabela e das rodadas do brasileirão serie A e B",
   "main": "dist/index.js",
